@@ -27,7 +27,7 @@ const [like, setLikes] = useState(props.post.likes)
         />
       </div>
       {/*ADDED LIKES BASED ON USE STATE*/}
-      <LikeSection likes={like} increase={() => setLikes(like + 1)} />
+      <LikeSection likes={like} increase={() => setLikes(like + 1)} resetNow={() => setLikes(0)} />
 
       <CommentSection
         postId={props.post.imageUrl}
